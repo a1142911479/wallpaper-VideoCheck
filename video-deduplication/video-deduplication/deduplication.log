@@ -1,0 +1,21 @@
+2026-11-08 09:14:25,539 - VideoDeduplication - INFO - ===== 视频去重系统启动（dry-run 模式）=====
+2026-11-08 09:14:25,550 - VideoDeduplication - INFO - 视频目录: D:/share/test_video | 缓存库: video_hashes.db | 报告: dedup_report.csv
+2026-11-08 09:14:25,578 - VideoDeduplication - INFO - SQLite 缓存库已就绪: video_hashes.db（WAL 模式，本地磁盘，用于复用元数据与指纹）
+2026-11-08 09:14:25,590 - VideoDeduplication - INFO - 共发现 4 个视频文件（已按路径排序，顺序读取 NAS）: D:/share/test_video
+2026-11-08 09:14:25,895 - VideoDeduplication - INFO - 元数据就绪：4 个视频（缓存命中 0 个，新读取 4 个）
+2026-11-08 09:14:25,911 - VideoDeduplication - INFO - 内容采样指纹就绪：4 个视频（缓存命中 0 个，新计算 4 个）
+2026-11-08 09:14:26,340 - VideoDeduplication - INFO - 文件级快速判重：2 组候选经全量 MD5 终审（新算 4 个），确认 2 个字节级重复簇，2 个新增/副本件预判待删除
+2026-11-08 09:14:26,341 - VideoDeduplication - INFO - 按时长分组完成：2 个组内存在可比对视频（90秒内组×2, 150秒内组×2）
+2026-11-08 09:14:26,341 - VideoDeduplication - INFO - 候选比对视频对: 2 对（时长组 ∪ 大小组）
+2026-11-08 09:14:26,341 - VideoDeduplication - INFO - 指纹就绪：0 个视频（缓存命中 0 个，内容复用 0 个，孪生别名 0 个，新解码 0 个）
+2026-11-08 09:14:26,341 - VideoDeduplication - INFO - 比对完成：0 对候选中 0 对判定为重复（判重线 90.0 分），0 对疑似重复（疑似线 85.0 分）
+2026-11-08 09:14:26,342 - VideoDeduplication - INFO - 重复聚组完成：2 个重复组
+2026-11-08 09:14:26,347 - VideoDeduplication - INFO - 保留决策完成：2 个待删除，2 个保留，0 个疑似重复，0 个无法解码，0 个唯一
+2026-11-08 09:14:26,348 - VideoDeduplication - INFO - CSV 复核报告已生成: dedup_report.csv（共 4 行，其中待删除 2 行）
+2026-11-08 09:14:26,969 - VideoDeduplication - INFO - Excel 分组报告已生成: dedup_report.xlsx（sheet：明细报告 / 分组报告）
+2026-11-08 09:14:26,970 - VideoDeduplication - INFO - 【dry-run】共 2 个文件将被删除（本次未执行任何文件操作）：
+2026-11-08 09:14:26,970 - VideoDeduplication - INFO -   [DRY-RUN 将删除] D:/share/test_video\v111\1576319110_8vMG0fEBYoclaagez_Source.mp4
+2026-11-08 09:14:26,970 - VideoDeduplication - INFO -   [DRY-RUN 将删除] D:/share/test_video\v111\[V家MMD Gotta Go] 啊！弱音姐姐的白丝！蒙蔽了我的双眼！.mp4
+2026-11-08 09:14:26,970 - VideoDeduplication - INFO - 确认 CSV 报告无误后，使用 --execute 参数真正执行删除。
+2026-11-08 09:14:26,970 - VideoDeduplication - INFO - 处理完成！耗时 1.43 秒。复核报告: dedup_report.csv
+2026-11-08 09:14:26,971 - VideoDeduplication - INFO - ===== 视频去重系统结束 =====
